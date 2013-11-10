@@ -8,7 +8,6 @@ namespace prueba
 {
     public interface IHumano
     {
-        [MedirConsumo]
         void Respirar();
     }
 }

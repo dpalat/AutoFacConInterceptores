@@ -61,7 +61,7 @@
     <Compile Include="MedirConsumo.cs" />
     <Compile Include="Mujer.cs" />
     <Compile Include="IHumano.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Principal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,8 @@ namespace prueba
             var peso = this.ObtenerPeso( invocation.ReturnValue );
             timer.Stop();
             var atributos = invocation.Method.GetCustomAttributes( typeof( MedirConsumo ), true );
+            
+
             if ( atributos.Any() )
             {
                 Console.WriteLine( "Se realizo la metrica de consumos, el tiempo fue de: " + timer.Elapsed.Milliseconds.ToString() + " mls, peso: " + peso.ToString() );
