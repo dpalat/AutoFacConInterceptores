@@ -10,7 +10,7 @@ namespace prueba
     public class Hombre : IHumano
     {
 
-        //[MedirConsumo]
+        [MedirConsumo]
         //[Interceptor("MiInterceptor")]
         public void Respirar()
         {

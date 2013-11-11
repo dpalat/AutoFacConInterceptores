@@ -18,7 +18,7 @@ namespace prueba
         static void Main( string[] args )
         {
             Console.WriteLine( "Iniciar" );
-            //Prueba01ContenedorAutoFac();
+            Prueba01ContenedorAutoFac();
             Prueba01ContenedorWinsor();
 
             Console.ReadLine();
@@ -26,12 +26,10 @@ namespace prueba
 
         private static void Prueba01ContenedorWinsor()
         {
-            // arrange
             var container = new WindsorContainer();
             container.Register(Component.For<IInterceptor>().ImplementedBy<Interceptor>().Named("MiInterceptor"));
             container.Register(Component.For<IHumano>().ImplementedBy<Hombre>().Named("ElMacho") );
             container.Register(Component.For<IHumano>().ImplementedBy<Mujer>().Named("LaHembra").LifestyleTransient().Interceptors("MiInterceptor"));
-            //
             
             container.Resolve<IHumano>().Respirar();
             container.Resolve<IHumano>("LaHembra").Respirar();
