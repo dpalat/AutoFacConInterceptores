@@ -1,38 +1,23 @@
 ﻿using Autofac;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace prueba
+namespace TestIoC
 {
     public class PlanetaTiera : IPlaneta
     {
-        private string _nombre;
-        private Autofac.IContainer container;
-        public string Nombre
-        {
-            get
-            {
-                return this._nombre;
-            }
-            set
-            {
-                this._nombre = value;
-            }
-        }
+        private IContainer _container;
+        public string Nombre { get; set; }
 
         public PlanetaTiera()
         {
-            Console.WriteLine( "BIENVENIDOS AL PLANETA TIERRA" );
+            Console.WriteLine( "Welcome to planet Earth" );
         }
 
         public PlanetaTiera( ContainerBuilder creadorDeContenedor )
         {
-            this.container = creadorDeContenedor.Build();
-            var humano = this.container.Resolve<IHumano>();
-            humano.Respirar();
+            _container = creadorDeContenedor.Build();
+            var humano = _container.Resolve<IHuman>();
+            humano.Breathe();
         }
     }
 }

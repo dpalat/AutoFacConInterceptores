@@ -40,7 +40,7 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
-
+.vs
 # Build results
 
 [Dd]ebug/
@@ -213,3 +213,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.lock

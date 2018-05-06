@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prueba
+namespace TestIoC
 {
     [AttributeUsage( AttributeTargets.Method )]
     public class MedirConsumo : Attribute

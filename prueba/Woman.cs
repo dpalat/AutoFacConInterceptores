@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace TestIoC
 {
-    public class Perro : IAnimal
+    public class Woman : IHuman
     {
-        public void Dormir()
+        public string Name { get; set; }
+
+        public void Breathe()
         {
-            Console.WriteLine( "El perro duerme!" );
+            Console.WriteLine("The woman breathes.");
         }
     }
 }
