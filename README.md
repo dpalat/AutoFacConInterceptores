@@ -1,2 +1,7 @@
 # AutoFacConInterceptores
-demostración de como interceptar métodos con utilizando AutoFac y Castle
+
+Simple code examples to know more about the Autofac and Castle in easy console proyect without more complexity.
+- IoC
+- DI
+- Interceptors
+
